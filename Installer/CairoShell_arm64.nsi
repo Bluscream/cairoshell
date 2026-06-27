@@ -1,6 +1,3 @@
-;--------------------------------
-; CairoShell_arm64.nsi
-
 !define ARCBITS 64
 !define ARCNAME "ARM64"
 !define NETTARGET "net10.0-windows"
