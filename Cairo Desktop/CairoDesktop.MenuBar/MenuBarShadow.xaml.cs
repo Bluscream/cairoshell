@@ -105,11 +105,9 @@ namespace CairoDesktop.MenuBar
 
             source.AddHook(WndProc);
 
+            WindowHelper.HideWindowFromTasks(helper.Handle);
             // Makes click-through by adding transparent style
-            // basically same as Shell.HideWindowFromTasks(helper.Handle);
-            NativeMethods.SetWindowLong(helper.Handle, NativeMethods.GWL_EXSTYLE, NativeMethods.GetWindowLong(helper.Handle, NativeMethods.GWL_EXSTYLE) | (int)NativeMethods.ExtendedWindowStyles.WS_EX_TOOLWINDOW | (int)NativeMethods.ExtendedWindowStyles.WS_EX_TRANSPARENT);
-
-            WindowHelper.ExcludeWindowFromPeek(helper.Handle);
+            NativeMethods.SetWindowLong(helper.Handle, NativeMethods.GWL_EXSTYLE, NativeMethods.GetWindowLong(helper.Handle, NativeMethods.GWL_EXSTYLE) | (int)NativeMethods.ExtendedWindowStyles.WS_EX_TRANSPARENT);
 
             SetPosition();
         }
