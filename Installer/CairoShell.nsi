@@ -42,7 +42,6 @@ RequestExecutionLevel Admin
   !define MUI_UNICON inst_icon.ico
   ;!define MUI_COMPONENTSPAGE_SMALLDESC
   !define MUI_WELCOMEFINISHPAGE_BITMAP left_img.bmp
-  !define MUI_WELCOMEPAGE_TEXT "$(PAGE_Welcome_Text_${NETTARGET})"
   !define MUI_WELCOMEPAGE_TITLE_3LINES
   !define MUI_FINISHPAGE_TITLE_3LINES
   !define MUI_FINISHPAGE_RUN
@@ -155,7 +154,7 @@ SectionEnd
   ;Language strings
 
   LangString PAGE_Welcome_Text_net480 ${LANG_ENGLISH} "This installer will guide you through the installation of Cairo.\r\n\r\nBefore installing, please ensure .NET Framework 4.8 or higher is installed, and that any running instance of Cairo is ended.\r\n\r\nClick Next to continue."
-  LangString PAGE_Welcome_Text_net6.0-windows ${LANG_ENGLISH} "This installer will guide you through the installation of Cairo.\r\n\r\nBefore installing, please ensure that any running instance of Cairo is ended.\r\n\r\nClick Next to continue."
+  LangString PAGE_Welcome_Text ${LANG_ENGLISH} "This installer will guide you through the installation of Cairo.\r\n\r\nBefore installing, please ensure that any running instance of Cairo is ended.\r\n\r\nClick Next to continue."
   LangString PAGE_Finish_RunText ${LANG_ENGLISH} "Start Cairo Desktop Environment"
   LangString PAGE_UnDir_TopText ${LANG_ENGLISH} "Please be sure that you have closed Cairo before uninstalling to ensure that all files are removed. All files in the directory below will be removed."
   LangString DLOG_RunningText ${LANG_ENGLISH} "Cairo is currently running. Please exit Cairo from the Cairo menu and run this installer again."
@@ -169,7 +168,7 @@ SectionEnd
   LangString DESC_shellCU ${LANG_ENGLISH} "Run Cairo instead of Windows Explorer. Note: this also disables UWP/Windows Store apps and other features in Windows using that technology."
 
   LangString PAGE_Welcome_Text_net480 ${LANG_FRENCH} "Cet installateur va vous guider au long de l'installation de Cairo.\r\n\r\nAvant d'installer, veuillez vous assurer que le .NET Framework 4.8 ou plus récent est installé, et que vous avez quitté toute instance de Cairo encore en cours de fonctionnement.\r\n\r\nCliquez sur Suivant pour continuer."
-  LangString PAGE_Welcome_Text_net6.0-windows ${LANG_FRENCH} "Cet installateur va vous guider au long de l'installation de Cairo.\r\n\r\nAvant d'installer, veuillez vous assurer que vous avez quitté toute instance de Cairo encore en cours de fonctionnement.\r\n\r\nCliquez sur Suivant pour continuer."
+  LangString PAGE_Welcome_Text ${LANG_FRENCH} "Cet installateur va vous guider au long de l'installation de Cairo.\r\n\r\nAvant d'installer, veuillez vous assurer que vous avez quitté toute instance de Cairo encore en cours de fonctionnement.\r\n\r\nCliquez sur Suivant pour continuer."
   LangString PAGE_Finish_RunText ${LANG_FRENCH} "Démarrer l'environnement de bureau Cairo"
   LangString PAGE_UnDir_TopText ${LANG_FRENCH} "Veuillez vérifier que vous avez fermé Cairo avant de le désinstaller pour assurer que tous les fichiers soient supprimés. All files in the directory below will be removed."
   LangString DLOG_RunningText ${LANG_FRENCH} "Cairo est en cours de fonctionnement. Veuillez quitter Cairo depuis le menu Cairo et lancer de nouveau cet installateur."
@@ -183,7 +182,7 @@ SectionEnd
   LangString DESC_shellCU ${LANG_FRENCH} "Lancer Cairo au lieu de l'Explorateur Windows. Notez que cela désactive également de nombreuses fonctionnalités nouvelles dans Windows."
   
   LangString PAGE_Welcome_Text_net480 ${LANG_SLOVENIAN} "Ta namestitveni program vas bo vodil skozi namestitev programa Cairo.\r\n\r\nPred namestitvijo se prepričajte, da imate nameščen .NET Framework 4.8 ali novejši ter da je morebitna zagnana instanca programa Cairo ustavljena.\r\n\r\nKliknite Naprej za nadaljevanje."
-  LangString PAGE_Welcome_Text_net6.0-windows ${LANG_SLOVENIAN} "Ta namestitveni program vas bo vodil skozi namestitev programa Cairo.\r\n\r\nPred namestitvijo se prepričajte, da je morebitna zagnana instanca programa Cairo ustavljena.\r\n\r\nKliknite Naprej za nadaljevanje."
+  LangString PAGE_Welcome_Text ${LANG_SLOVENIAN} "Ta namestitveni program vas bo vodil skozi namestitev programa Cairo.\r\n\r\nPred namestitvijo se prepričajte, da je morebitna zagnana instanca programa Cairo ustavljena.\r\n\r\nKliknite Naprej za nadaljevanje."
   LangString PAGE_Finish_RunText ${LANG_SLOVENIAN} "Zaženi Cairo namizno okolje"
   LangString PAGE_UnDir_TopText ${LANG_SLOVENIAN} "Pred odstranitvijo se prepričajte, da je program Cairo zaprt, da zagotovite odstranitev vseh datotek. Vse datoteke v spodnji mapi bodo odstranjene."
   LangString DLOG_RunningText ${LANG_SLOVENIAN} "Program Cairo je trenutno zagnan. Zaprite ga v meniju Cairo in znova zaženite ta namestitveni program."
@@ -198,7 +197,7 @@ SectionEnd
 
 
  LangString PAGE_Welcome_Text_net480 ${LANG_NORWEGIAN} "Denne installasjonsveiviseren hjelper deg med å installere Cairo.\r\n\r\nFør installasjon, sørg for at .NET Framework 4.8 eller nyere er installert, og at alle kjørende Cairo-prosesser er avsluttet.\r\n\r\nKlikk Neste for å fortsette."
-LangString PAGE_Welcome_Text_net6.0-windows ${LANG_NORWEGIAN} "Denne installasjonsveiviseren hjelper deg med å installere Cairo.\r\n\r\nFør installasjon, sørg for at alle kjørende Cairo-prosesser er avsluttet.\r\n\r\nKlikk Neste for å fortsette."
+LangString PAGE_Welcome_Text ${LANG_NORWEGIAN} "Denne installasjonsveiviseren hjelper deg med å installere Cairo.\r\n\r\nFør installasjon, sørg for at alle kjørende Cairo-prosesser er avsluttet.\r\n\r\nKlikk Neste for å fortsette."
 LangString PAGE_Finish_RunText ${LANG_NORWEGIAN} "Start Cairo Desktop-miljø"
 LangString PAGE_UnDir_TopText ${LANG_NORWEGIAN} "Vennligst sørg for at Cairo er avsluttet før du avinstallerer, for å sikre at alle filer fjernes. Alle filer i katalogen nedenfor vil bli slettet."
 LangString DLOG_RunningText ${LANG_NORWEGIAN} "Cairo kjører for øyeblikket. Lukk Cairo fra Cairo-menyen og kjør installasjonsprogrammet igjen."

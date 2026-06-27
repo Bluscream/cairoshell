@@ -20,6 +20,7 @@
     <Authors>Cairo Development Team</Authors>
     <Product>Cairo Desktop Environment</Product>
     <Copyright>Copyright © 2022 Cairo Development Team</Copyright>
+	<LangVersion>12</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Platform)'=='AnyCPU'">
