@@ -24,8 +24,8 @@ InstallDirRegKey HKLM "Software\CairoShell" "Install_Dir"
 ; Request admin rights on Vista+ (when UAC is turned on)
 RequestExecutionLevel Admin 
 
-; Minimum .NET Framework release (4.7.1)
-!define MIN_FRA_RELEASE "461308"
+; Minimum .NET Framework release (4.8)
+!define MIN_FRA_RELEASE "528040"
 
 !define MUI_ABORTWARNING
 !include "MUI.nsh"
@@ -105,7 +105,7 @@ Section "$(SECT_cairo)" cairo
   SectionIn RO
 
   ; Check .NET version
-  StrCmp ${NETTARGET} "net471" 0 no_net_check
+  StrCmp ${NETTARGET} "net480" 0 no_net_check
     Call AbortIfBadFramework
   no_net_check:
 
@@ -154,13 +154,13 @@ SectionEnd
 
   ;Language strings
 
-  LangString PAGE_Welcome_Text_net471 ${LANG_ENGLISH} "This installer will guide you through the installation of Cairo.\r\n\r\nBefore installing, please ensure .NET Framework 4.7.1 or higher is installed, and that any running instance of Cairo is ended.\r\n\r\nClick Next to continue."
+  LangString PAGE_Welcome_Text_net480 ${LANG_ENGLISH} "This installer will guide you through the installation of Cairo.\r\n\r\nBefore installing, please ensure .NET Framework 4.8 or higher is installed, and that any running instance of Cairo is ended.\r\n\r\nClick Next to continue."
   LangString PAGE_Welcome_Text_net6.0-windows ${LANG_ENGLISH} "This installer will guide you through the installation of Cairo.\r\n\r\nBefore installing, please ensure that any running instance of Cairo is ended.\r\n\r\nClick Next to continue."
   LangString PAGE_Finish_RunText ${LANG_ENGLISH} "Start Cairo Desktop Environment"
   LangString PAGE_UnDir_TopText ${LANG_ENGLISH} "Please be sure that you have closed Cairo before uninstalling to ensure that all files are removed. All files in the directory below will be removed."
   LangString DLOG_RunningText ${LANG_ENGLISH} "Cairo is currently running. Please exit Cairo from the Cairo menu and run this installer again."
   LangString DLOG_RunningText2 ${LANG_ENGLISH} "Cairo is currently running. Please exit Cairo from the Cairo menu."
-  LangString DLOG_DotNetText ${LANG_ENGLISH} "Cairo requires Microsoft .NET Framework 4.7.1 or higher. Please install this from the Microsoft web site and install Cairo again."
+  LangString DLOG_DotNetText ${LANG_ENGLISH} "Cairo requires Microsoft .NET Framework 4.8 or higher. Please install this from the Microsoft web site and install Cairo again."
   LangString SECT_cairo ${LANG_ENGLISH} "Cairo Desktop (required)"
   LangString SECT_startupCU ${LANG_ENGLISH} "Run at startup (current user)"
   LangString SECT_shellCU ${LANG_ENGLISH} "Advanced: Disable Explorer (current user)"
@@ -168,13 +168,13 @@ SectionEnd
   LangString DESC_startupCU ${LANG_ENGLISH} "Makes Cairo start up when you log in."
   LangString DESC_shellCU ${LANG_ENGLISH} "Run Cairo instead of Windows Explorer. Note: this also disables UWP/Windows Store apps and other features in Windows using that technology."
 
-  LangString PAGE_Welcome_Text_net471 ${LANG_FRENCH} "Cet installateur va vous guider au long de l'installation de Cairo.\r\n\r\nAvant d'installer, veuillez vous assurer que le .NET Framework 4.7.1 ou plus récent est installé, et que vous avez quitté toute instance de Cairo encore en cours de fonctionnement.\r\n\r\nCliquez sur Suivant pour continuer."
+  LangString PAGE_Welcome_Text_net480 ${LANG_FRENCH} "Cet installateur va vous guider au long de l'installation de Cairo.\r\n\r\nAvant d'installer, veuillez vous assurer que le .NET Framework 4.8 ou plus récent est installé, et que vous avez quitté toute instance de Cairo encore en cours de fonctionnement.\r\n\r\nCliquez sur Suivant pour continuer."
   LangString PAGE_Welcome_Text_net6.0-windows ${LANG_FRENCH} "Cet installateur va vous guider au long de l'installation de Cairo.\r\n\r\nAvant d'installer, veuillez vous assurer que vous avez quitté toute instance de Cairo encore en cours de fonctionnement.\r\n\r\nCliquez sur Suivant pour continuer."
   LangString PAGE_Finish_RunText ${LANG_FRENCH} "Démarrer l'environnement de bureau Cairo"
   LangString PAGE_UnDir_TopText ${LANG_FRENCH} "Veuillez vérifier que vous avez fermé Cairo avant de le désinstaller pour assurer que tous les fichiers soient supprimés. All files in the directory below will be removed."
   LangString DLOG_RunningText ${LANG_FRENCH} "Cairo est en cours de fonctionnement. Veuillez quitter Cairo depuis le menu Cairo et lancer de nouveau cet installateur."
   LangString DLOG_RunningText2 ${LANG_FRENCH} "Cairo est en cours de fonctionnement. Veuillez quitter Cairo depuis le menu Cairo."
-  LangString DLOG_DotNetText ${LANG_FRENCH} "Cairo nécessite le Microsoft .NET Framework 4.7.1 ou plus récent. Veuillez l'installer depuis le site web de Microsoft et installer de nouveau Cairo."
+  LangString DLOG_DotNetText ${LANG_FRENCH} "Cairo nécessite le Microsoft .NET Framework 4.8 ou plus récent. Veuillez l'installer depuis le site web de Microsoft et installer de nouveau Cairo."
   LangString SECT_cairo ${LANG_FRENCH} "Bureau Cairo (requis)"
   LangString SECT_startupCU ${LANG_FRENCH} "Lancer au démarrage (utilisateur actuel)"
   LangString SECT_shellCU ${LANG_FRENCH} "Utilisateurs avancés uniquement : remplacer l'Explorateur Windows (utilisateur actuel)"
@@ -182,13 +182,13 @@ SectionEnd
   LangString DESC_startupCU ${LANG_FRENCH} "Démarrer Cairo lorsque vous vous connectez."
   LangString DESC_shellCU ${LANG_FRENCH} "Lancer Cairo au lieu de l'Explorateur Windows. Notez que cela désactive également de nombreuses fonctionnalités nouvelles dans Windows."
   
-  LangString PAGE_Welcome_Text_net471 ${LANG_SLOVENIAN} "Ta namestitveni program vas bo vodil skozi namestitev programa Cairo.\r\n\r\nPred namestitvijo se prepričajte, da imate nameščen .NET Framework 4.7.1 ali novejši ter da je morebitna zagnana instanca programa Cairo ustavljena.\r\n\r\nKliknite Naprej za nadaljevanje."
+  LangString PAGE_Welcome_Text_net480 ${LANG_SLOVENIAN} "Ta namestitveni program vas bo vodil skozi namestitev programa Cairo.\r\n\r\nPred namestitvijo se prepričajte, da imate nameščen .NET Framework 4.8 ali novejši ter da je morebitna zagnana instanca programa Cairo ustavljena.\r\n\r\nKliknite Naprej za nadaljevanje."
   LangString PAGE_Welcome_Text_net6.0-windows ${LANG_SLOVENIAN} "Ta namestitveni program vas bo vodil skozi namestitev programa Cairo.\r\n\r\nPred namestitvijo se prepričajte, da je morebitna zagnana instanca programa Cairo ustavljena.\r\n\r\nKliknite Naprej za nadaljevanje."
   LangString PAGE_Finish_RunText ${LANG_SLOVENIAN} "Zaženi Cairo namizno okolje"
   LangString PAGE_UnDir_TopText ${LANG_SLOVENIAN} "Pred odstranitvijo se prepričajte, da je program Cairo zaprt, da zagotovite odstranitev vseh datotek. Vse datoteke v spodnji mapi bodo odstranjene."
   LangString DLOG_RunningText ${LANG_SLOVENIAN} "Program Cairo je trenutno zagnan. Zaprite ga v meniju Cairo in znova zaženite ta namestitveni program."
   LangString DLOG_RunningText2 ${LANG_SLOVENIAN} "Program Cairo je trenutno zagnan. Zaprite ga v meniju Cairo."
-  LangString DLOG_DotNetText ${LANG_SLOVENIAN} "Program Cairo zahteva Microsoft .NET Framework 4.7.1 ali novejši. Namestite ga s spletne strani Microsoft in nato znova namestite program Cairo."
+  LangString DLOG_DotNetText ${LANG_SLOVENIAN} "Program Cairo zahteva Microsoft .NET Framework 4.8 ali novejši. Namestite ga s spletne strani Microsoft in nato znova namestite program Cairo."
   LangString SECT_cairo ${LANG_SLOVENIAN} "Cairo namizje (obvezno)"
   LangString SECT_startupCU ${LANG_SLOVENIAN} "Zaženi ob zagonu (trenutni uporabnik)"
   LangString SECT_shellCU ${LANG_SLOVENIAN} "Napredno: Onemogoči Explorer (trenutni uporabnik)"
@@ -197,13 +197,13 @@ SectionEnd
   LangString DESC_shellCU ${LANG_SLOVENIAN} "Zažene Cairo namesto Windows Explorerja. Opomba: to onemogoči aplikacije UWP/Windows Store in druge funkcije sistema Windows, ki uporabljajo to tehnologijo."
 
 
- LangString PAGE_Welcome_Text_net471 ${LANG_NORWEGIAN} "Denne installasjonsveiviseren hjelper deg med å installere Cairo.\r\n\r\nFør installasjon, sørg for at .NET Framework 4.7.1 eller nyere er installert, og at alle kjørende Cairo-prosesser er avsluttet.\r\n\r\nKlikk Neste for å fortsette."
+ LangString PAGE_Welcome_Text_net480 ${LANG_NORWEGIAN} "Denne installasjonsveiviseren hjelper deg med å installere Cairo.\r\n\r\nFør installasjon, sørg for at .NET Framework 4.8 eller nyere er installert, og at alle kjørende Cairo-prosesser er avsluttet.\r\n\r\nKlikk Neste for å fortsette."
 LangString PAGE_Welcome_Text_net6.0-windows ${LANG_NORWEGIAN} "Denne installasjonsveiviseren hjelper deg med å installere Cairo.\r\n\r\nFør installasjon, sørg for at alle kjørende Cairo-prosesser er avsluttet.\r\n\r\nKlikk Neste for å fortsette."
 LangString PAGE_Finish_RunText ${LANG_NORWEGIAN} "Start Cairo Desktop-miljø"
 LangString PAGE_UnDir_TopText ${LANG_NORWEGIAN} "Vennligst sørg for at Cairo er avsluttet før du avinstallerer, for å sikre at alle filer fjernes. Alle filer i katalogen nedenfor vil bli slettet."
 LangString DLOG_RunningText ${LANG_NORWEGIAN} "Cairo kjører for øyeblikket. Lukk Cairo fra Cairo-menyen og kjør installasjonsprogrammet igjen."
 LangString DLOG_RunningText2 ${LANG_NORWEGIAN} "Cairo kjører for øyeblikket. Lukk Cairo fra Cairo-menyen."
-LangString DLOG_DotNetText ${LANG_NORWEGIAN} "Cairo krever Microsoft .NET Framework 4.7.1 eller nyere. Installer dette fra Microsofts nettside og prøv igjen."
+LangString DLOG_DotNetText ${LANG_NORWEGIAN} "Cairo krever Microsoft .NET Framework 4.8 eller nyere. Installer dette fra Microsofts nettside og prøv igjen."
 LangString SECT_cairo ${LANG_NORWEGIAN} "Cairo Desktop (påkrevd)"
 LangString SECT_startupCU ${LANG_NORWEGIAN} "Start ved oppstart (gjeldende bruker)"
 LangString SECT_shellCU ${LANG_NORWEGIAN} "Avansert: Deaktiver Explorer (gjeldende bruker)"
