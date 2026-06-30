@@ -24,18 +24,18 @@ jobs:
           platform: AnyCPU
           installer: 32-bit
         -
-          profile: x64_net471
-          framework: net471
+          profile: x64_net480
+          framework: net480
           platform: x64
-          installer: "64-bit .NET 4.7.1"
+          installer: "64-bit .NET 4.8"
         -
-          profile: x86_net471
-          framework: net471
+          profile: x86_net480
+          framework: net480
           platform: AnyCPU
-          installer: "32-bit .NET 4.7.1"
+          installer: "32-bit .NET 4.8"
         -
           profile: arm64
-          framework: net6.0-windows
+          framework: net10.0-windows
           platform: ARM64
           installer: ARM64
 
